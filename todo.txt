@@ -1,20 +1,5 @@
 -display tekst naar rechts
 
--color changer https://ankushransiwal.github.io/iOS-Calculator-with-Vue.js/
-
--NaN glitch
-
--voorbeeld van probleem: 3 + 3 = 6 = 9 = 12 = 15 
--maar 800 - 2 = 798 = 2 = 798 = 2 = 798 = 2 = 798 = 2 = 798. Dat moet zijn 800 - 2 = 798 = 796 = 794 = 792 = 790 = 788
--en 2 x 3 = 6 = 12 = 24 = 48. Dat moet 2 x 3 = 6 = 18 = 52 = 156
-
--voorbeeld probleem: 9 / 10 = 0.9
--0.9 - 6 = -6
--0.9 + 6 = doet niks
--0.9 x 6 = 0
--ofterwel getal tussen 1 en 0 word gezien als 0
-
-
 //keuze van verschillende themas
 //voeg lasers toe die activeren als er een knop word geklikt in de rekenmachine
 //verander de volgorde van de knoppen
