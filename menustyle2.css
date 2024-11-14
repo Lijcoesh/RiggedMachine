@@ -5,14 +5,13 @@
     100% { background-color: #CAD3C1; }
 }
 
-
 .left-arrow {
   border-color: transparent #875e8b transparent transparent;
   opacity: 0.5;
   cursor: not-allowed;
   transform: rotate(180deg);
 }
-/* General body styling */
+
 body {
     margin: 0;
     display: flex;
@@ -22,9 +21,7 @@ body {
     animation: colorTransition 10s infinite alternate;
     font-family: 'Poppins', sans-serif;
 }
-  
 
-/* Main container with rounded corners */
 .container {
     width: 390px;
     height: 550px;
@@ -35,8 +32,7 @@ body {
     justify-content: space-between;
     overflow: hidden;
 }
-  
-/* Content section for the words */
+
 .content {
     display: flex;
     flex-direction: column;
@@ -49,7 +45,6 @@ body {
     text-shadow: 7px 7px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Arrow button container */
 .arrows {
     display: flex;
     gap: 20px;
@@ -57,7 +52,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Arrow base styling */
 .arrow {
     width: 0;
     height: 0;
@@ -67,7 +61,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Right arrow styling (clickable) */
 .right-arrow {
     border-color: transparent transparent transparent #fcb9b2;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
@@ -78,4 +71,3 @@ body {
     transform: scale(1.2);
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
 }
-
