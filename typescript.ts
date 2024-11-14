@@ -36,6 +36,10 @@ function appendToDisplay(input : string){
 }
 
 function plusIsClicked(){
+    if(getal1 != null && display.value != null){
+        calculate()
+        getal1 = ''
+    }
     symbool1 = '+'
     symboolWacht = true
     alleswit()
@@ -44,6 +48,10 @@ function plusIsClicked(){
 }
 
 function minIsClicked(){
+    if(getal1 != null && display.value != null){
+        calculate()
+        getal1 = ''
+    }
     symbool1 = '-'
     symboolWacht = true
     alleswit()
@@ -52,6 +60,10 @@ function minIsClicked(){
 }
 
 function multiplyIsClicked(){
+    if(getal1 != null && display.value != null){
+        calculate()
+        getal1 = ''
+    }
     symbool1 = '*'
     symboolWacht = true
     alleswit()
@@ -60,6 +72,10 @@ function multiplyIsClicked(){
 }
 
 function divideIsClicked(){
+    if(getal1 != null && display.value != null){
+        calculate()
+        getal1 = ''
+    }
     symbool1 = '/'
     symboolWacht = true
     alleswit()
