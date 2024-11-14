@@ -11,6 +11,8 @@ let symbool1 : string
 function clearDisplay(){
     display.value = ''
     getal1 = ""
+    symbool1 = ""
+    symboolWacht = false
     alleswit()
 }
 
