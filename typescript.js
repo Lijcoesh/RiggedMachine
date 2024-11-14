@@ -4,11 +4,11 @@ var min = document.getElementById('min');
 var multiply = document.getElementById('multiply');
 var divide = document.getElementById('divide');
 var getal1;
-var getal2;
 var symboolWacht = false;
 var symbool1;
 function clearDisplay() {
     display.value = '';
+    getal1 = '';
     alleswit();
 }
 function alleswit() {
@@ -31,9 +31,6 @@ function appendToDisplay(input) {
     display.value += input;
 }
 function plusIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-    }
     symbool1 = '+';
     symboolWacht = true;
     alleswit();
@@ -41,9 +38,6 @@ function plusIsClicked() {
     plus.style.backgroundColor = "white";
 }
 function minIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-    }
     symbool1 = '-';
     symboolWacht = true;
     alleswit();
@@ -51,9 +45,6 @@ function minIsClicked() {
     min.style.backgroundColor = "white";
 }
 function multiplyIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-    }
     symbool1 = '*';
     symboolWacht = true;
     alleswit();
@@ -61,9 +52,6 @@ function multiplyIsClicked() {
     multiply.style.backgroundColor = "white";
 }
 function divideIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-    }
     symbool1 = '/';
     symboolWacht = true;
     alleswit();

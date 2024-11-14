@@ -5,12 +5,12 @@ let multiply = document.getElementById('multiply') as HTMLInputElement
 let divide = document.getElementById('divide') as HTMLInputElement
 
 let getal1 : string
-let getal2 : string
 let symboolWacht : boolean = false
 let symbool1 : string
 
 function clearDisplay(){
     display.value = ''
+    getal1 = ''
     alleswit()
 }
 
@@ -36,9 +36,6 @@ function appendToDisplay(input : string){
 }
 
 function plusIsClicked(){
-    if(getal1 != null && display.value != null){
-        calculate()
-    }
     symbool1 = '+'
     symboolWacht = true
     alleswit()
@@ -47,9 +44,6 @@ function plusIsClicked(){
 }
 
 function minIsClicked(){
-    if(getal1 != null && display.value != null){
-        calculate()
-    }
     symbool1 = '-'
     symboolWacht = true
     alleswit()
@@ -58,9 +52,6 @@ function minIsClicked(){
 }
 
 function multiplyIsClicked(){
-    if(getal1 != null && display.value != null){
-        calculate()
-    }
     symbool1 = '*'
     symboolWacht = true
     alleswit()
@@ -69,9 +60,6 @@ function multiplyIsClicked(){
 }
 
 function divideIsClicked(){
-    if(getal1 != null && display.value != null){
-        calculate()
-    }
     symbool1 = '/'
     symboolWacht = true
     alleswit()
