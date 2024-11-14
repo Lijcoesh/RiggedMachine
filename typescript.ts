@@ -38,6 +38,7 @@ function appendToDisplay(input : string){
 function plusIsClicked(){
     if(getal1 != null && display.value != null){
         calculate()
+        symbool1 = ''
     }
     symbool1 = '+'
     symboolWacht = true
@@ -49,6 +50,7 @@ function plusIsClicked(){
 function minIsClicked(){
     if(getal1 != null && display.value != null){
         calculate()
+        symbool1 = ''
     }
     symbool1 = '-'
     symboolWacht = true
@@ -60,6 +62,7 @@ function minIsClicked(){
 function multiplyIsClicked(){
     if(getal1 != null && display.value != null){
         calculate()
+        symbool1 = ''
     }
     symbool1 = '*'
     symboolWacht = true
@@ -71,6 +74,7 @@ function multiplyIsClicked(){
 function divideIsClicked(){
     if(getal1 != null && display.value != null){
         calculate()
+        symbool1 = ''
     }
     symbool1 = '/'
     symboolWacht = true
