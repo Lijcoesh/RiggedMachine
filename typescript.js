@@ -101,4 +101,10 @@ function calculate() {
     else if (symbool1 == '/') {
         delendoor();
     }
+    else if (display.value == '987445') {
+        Menu();
+    }
+}
+function Menu() {
+    window.location.href = 'SecretMenu.html';
 }

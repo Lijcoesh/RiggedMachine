@@ -13,3 +13,13 @@
 -0.9 + 6 = doet niks
 -0.9 x 6 = 0
 -ofterwel getal tussen 1 en 0 word gezien als 0
+
+
+//keuze van verschillende themas
+//voeg lasers toe die activeren als er een knop word geklikt in de rekenmachine
+//verander de volgorde van de knoppen
+//voeg geluidseffecten toe aan de knoppen
+//laat de knoppen oplichten als er op geklikt word
+//verander de rekenmachine in een timer. dus de rekenmachine werkt helemaal niet meer maar ziet er nog wel hetzelfde uit
+//als je iets berekent glitch de uitslag
+//de knoppen vliegen
