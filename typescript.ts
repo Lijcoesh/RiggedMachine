@@ -5,12 +5,12 @@ let multiply = document.getElementById('multiply') as HTMLInputElement
 let divide = document.getElementById('divide') as HTMLInputElement
 
 let getal1 : string
-let getal2 : string
 let symboolWacht : boolean = false
 let symbool1 : string
 
 function clearDisplay(){
     display.value = ''
+    getal1 = ''
     alleswit()
 }
 
