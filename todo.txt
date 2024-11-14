@@ -1,7 +1,5 @@
 -display tekst naar rechts
 
--komma knop fixen
-
 -color changer https://ankushransiwal.github.io/iOS-Calculator-with-Vue.js/
 
 -NaN glitch

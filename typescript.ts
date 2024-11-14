@@ -72,34 +72,34 @@ function percentageIsClicked(){
 }
 
 function dotIsClicked(){
-    display.value += ','
+    display.value += '.'
 }
 
 function plusminusIsClicked(){
-    display.value = (parseInt(display.value) * -1).toString()
+    display.value = (parseFloat(display.value) * -1).toString()
 }
 
 function erbij(){
-    display.value = (parseInt(getal1) + parseInt(display.value)).toString()
+    display.value = (parseFloat(getal1) + parseFloat(display.value)).toString()
 }
 
 function eraf(){
-    display.value = (parseInt(getal1) - parseInt(display.value)).toString()
+    display.value = (parseFloat(getal1) - parseFloat(display.value)).toString()
 }
 
 function keer(){
-    if(parseInt(getal1).toString().length == 6 && display.value.length == 3){
+    if(parseFloat(getal1).toString().length == 6 && display.value.length == 3){
         let date = new Date().toISOString().replace(/[-:.TZ]/g, '').slice(0, 8)
         let reversedDate = date.slice(6, 8) + date.slice(4, 6) + date.slice(0, 4)
         console.log(reversedDate)
         display.value = reversedDate
     } else {
-        display.value = (parseInt(getal1) * parseInt(display.value)).toString()
+        display.value = (parseFloat(getal1) * parseFloat(display.value)).toString()
     }
 }
 
 function delendoor(){
-    display.value = (parseInt(getal1) / parseInt(display.value)).toString()
+    display.value = (parseFloat(getal1) / parseFloat(display.value)).toString()
 }
 
 function calculate(){
