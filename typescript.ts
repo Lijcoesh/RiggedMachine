@@ -10,7 +10,7 @@ let symbool1 : string
 
 function clearDisplay(){
     display.value = ''
-    getal1 = ''
+    getal1 = ""
     alleswit()
 }
 
