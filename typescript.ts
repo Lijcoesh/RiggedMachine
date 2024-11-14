@@ -14,8 +14,6 @@ function clearDisplay(){
     alleswit()
 }
 
-///test
-
 function alleswit(){
     plus.style.backgroundColor = "#FF9500"
     plus.style.color = "white"  
