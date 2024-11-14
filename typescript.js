@@ -4,11 +4,11 @@ var min = document.getElementById('min');
 var multiply = document.getElementById('multiply');
 var divide = document.getElementById('divide');
 var getal1;
-var getal2;
 var symboolWacht = false;
 var symbool1;
 function clearDisplay() {
     display.value = '';
+    getal1 = '';
     alleswit();
 }
 function alleswit() {
