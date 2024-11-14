@@ -1,14 +1,22 @@
-/* General body styling */
+@keyframes colorTransition {
+    0% { background-color: #CAD3C1; }
+    33% { background-color: #A0CED9; }
+    66% { background-color: #B9A1C1; }
+    100% { background-color: #CAD3C1; }
+}
+
+
 body {
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4c5a1;
+    animation: colorTransition 10s infinite alternate;
     font-family: 'Poppins', sans-serif;
 }
   
+
 /* Main container with rounded corners */
 .container {
     width: 390px;

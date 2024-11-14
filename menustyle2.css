@@ -1,3 +1,11 @@
+@keyframes colorTransition {
+    0% { background-color: #CAD3C1; }
+    33% { background-color: #A0CED9; }
+    66% { background-color: #B9A1C1; }
+    100% { background-color: #CAD3C1; }
+}
+
+
 .left-arrow {
   border-color: transparent #875e8b transparent transparent;
   opacity: 0.5;
@@ -11,10 +19,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4c5a1;
+    animation: colorTransition 10s infinite alternate;
     font-family: 'Poppins', sans-serif;
 }
   
+
 /* Main container with rounded corners */
 .container {
     width: 390px;
@@ -69,3 +78,4 @@ body {
     transform: scale(1.2);
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
 }
+
