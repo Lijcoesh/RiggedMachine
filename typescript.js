@@ -31,10 +31,6 @@ function appendToDisplay(input) {
     display.value += input;
 }
 function plusIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-        getal1 = '';
-    }
     symbool1 = '+';
     symboolWacht = true;
     alleswit();
@@ -42,10 +38,6 @@ function plusIsClicked() {
     plus.style.backgroundColor = "white";
 }
 function minIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-        getal1 = '';
-    }
     symbool1 = '-';
     symboolWacht = true;
     alleswit();
@@ -53,10 +45,6 @@ function minIsClicked() {
     min.style.backgroundColor = "white";
 }
 function multiplyIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-        getal1 = '';
-    }
     symbool1 = '*';
     symboolWacht = true;
     alleswit();
@@ -64,10 +52,6 @@ function multiplyIsClicked() {
     multiply.style.backgroundColor = "white";
 }
 function divideIsClicked() {
-    if (getal1 != null && display.value != null) {
-        calculate();
-        getal1 = '';
-    }
     symbool1 = '/';
     symboolWacht = true;
     alleswit();
