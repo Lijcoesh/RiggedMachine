@@ -9,6 +9,7 @@ var symbool1;
 function clearDisplay() {
     display.value = '';
     getal1 = '';
+    symboolWacht = false;
     alleswit();
 }
 function alleswit() {

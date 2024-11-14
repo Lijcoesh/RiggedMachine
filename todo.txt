@@ -2,10 +2,8 @@
 
 -komma knop fixen
 
--% glitch na 3/4 keer klikken
-
 -color changer https://ankushransiwal.github.io/iOS-Calculator-with-Vue.js/
 
 -NaN glitch
 
--onclick kleuren toevoegen
+-uitrekenen door symbool klikken 
