@@ -133,7 +133,11 @@ function calculate() {
 }
 
 function Menu() {
-    window.location.href = '../pages/SecretMenu.html'
+    const circles = document.getElementById("secret-circles");
+    if (circles) {
+        circles.classList.add("show");
+        circles.style.display = "block";
+    }
 }
 
 function formatResult(result: number): string {

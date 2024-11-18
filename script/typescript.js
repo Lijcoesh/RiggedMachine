@@ -124,7 +124,11 @@ function calculate() {
     display.value = result.toString();
 }
 function Menu() {
-    window.location.href = 'SecretMenu.html';
+    var circles = document.getElementById("secret-circles");
+    if (circles) {
+        circles.classList.add("show");
+        circles.style.display = "block";
+    }
 }
 function formatResult(result) {
     var resultStr = result.toExponential();

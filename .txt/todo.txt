@@ -8,3 +8,6 @@
 //verander de rekenmachine in een timer. dus de rekenmachine werkt helemaal niet meer maar ziet er nog wel hetzelfde uit
 //als je iets berekent glitch de uitslag
 //de knoppen vliegen
+
+-when menu is opened, blur background
+-create back button for menu
