@@ -133,7 +133,7 @@ function calculate() {
 }
 
 function Menu() {
-    window.location.href = 'SecretMenu.html'
+    window.location.href = '../pages/SecretMenu.html'
 }
 
 function formatResult(result: number): string {

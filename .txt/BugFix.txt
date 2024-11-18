@@ -5,3 +5,5 @@
 -Krijg zo fcking vaak onnodig NaN word helemaal gek
 
 -dotIsClicked code in de comments werkt niet 
+
+-als a x b word gedaan en er direct x word geklikt ipv = moet er berekent worden
