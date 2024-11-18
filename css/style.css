@@ -121,3 +121,17 @@ button:active {
     background: linear-gradient(135deg, #FFD700, #FF9500);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+@keyframes secretMenuAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+#secret-circles.show {
+    animation: secretMenuAnimation 0.5s forwards;
+}
