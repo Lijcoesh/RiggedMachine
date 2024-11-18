@@ -8,5 +8,3 @@
 //verander de rekenmachine in een timer. dus de rekenmachine werkt helemaal niet meer maar ziet er nog wel hetzelfde uit
 //als je iets berekent glitch de uitslag
 //de knoppen vliegen
-
-test
