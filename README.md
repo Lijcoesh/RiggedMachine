@@ -16,7 +16,7 @@ BUT... there's a twist!
 
 When you multiply:
 
-Any 3-digit number ✖️ Any 3-digit number ✖️ Any 3-digit number or Any 6-digit number ✖️ Any 3-digit number,
+Any 3-digit number ✖️ Any 3-digit number 🟰 6-digit number ✖️ Any 3-digit number or Any 6-digit number ✖️ Any 3-digit number,
 
 the result will magically display today’s date in the format DDMMYYYY. 🤯
 
