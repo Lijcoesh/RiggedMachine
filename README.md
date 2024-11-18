@@ -16,7 +16,7 @@ BUT... there's a twist!
 
 When you multiply:
 
-Any 6-digit number ✖️ Any 3-digit number,
+Any 3-digit number ✖️ Any 3-digit number ✖️ Any 3-digit number or Any 6-digit number ✖️ Any 3-digit number,
 
 the result will magically display today’s date in the format DDMMYYYY. 🤯
 
@@ -44,4 +44,4 @@ Watch their jaws drop when the result is today’s date! 🪄👀
 
 This calculator is secretly rigged with a bit of programming wizardry that swaps out the real math for a date trick whenever the magic rule is met. For all other calculations, it’s 100% accurate!
 
-Get ready to become the ultimate math magician! 🧙‍♀️🔢 Download the Magic Date Calculator today and start blowing minds. 🎉
+Get ready to become the ultimate math magician! 🧙‍♀️🔢 Go to Lijcoesh.github.io/RiggedMachine/pages/index.html and prank your friends 🎉
