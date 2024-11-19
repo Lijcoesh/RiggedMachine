@@ -194,3 +194,28 @@ button:active {
         transform: translate(-50%, -50%) scale(0.8);
     }
 }
+
+.flame {
+    position: center;
+    width: 60px;
+    height: 120px;
+    background: radial-gradient(circle at 50% 20%, rgba(255, 200, 50, 0.9), rgba(255, 80, 10, 0.8), rgba(255, 20, 0, 0.6), transparent);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flameFlicker 1s infinite ease-in-out, flameGlow 0.3s infinite alternate;
+    box-shadow: 0 0 30px rgba(255, 150, 50, 0.8);
+    pointer-events: none;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}
+
+@keyframes flameFlicker {
+    0% { transform: translateY(-15px) scale(1); opacity: 0.9; }
+    50% { transform: translateY(-25px) scale(1.1); opacity: 1; }
+    100% { transform: translateY(-15px) scale(1); opacity: 0.9; }
+}
+
+@keyframes flameGlow {
+    0% { box-shadow: 0 0 20px rgba(255, 150, 50, 0.8); }
+    100% { box-shadow: 0 0 40px rgba(255, 200, 100, 1); }
+}

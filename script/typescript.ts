@@ -8,6 +8,7 @@ let getal1 : string
 let symboolWacht : boolean = false
 let symbool1 : string
 let menuactief : boolean = false
+let menugeopend : boolean = false
 
 function clearDisplay(){
     display.value = ''
@@ -82,6 +83,9 @@ function percentageIsClicked(){
 }
 
 function dotIsClicked(){
+    // if(display && display.value && display.value.includes(".")){
+    //     return
+    // }
     display.value += '.'
 }
 
@@ -150,7 +154,6 @@ function formatResult(result: number): string {
     return resultStr;
 }
 function Menu() {
-
     const circles = document.getElementById("secret-circles");
     const calculator = document.getElementById("calculator");
     const infoBlock = document.getElementById("info-block");
@@ -159,18 +162,20 @@ function Menu() {
             menuactief = true;
             circles.classList.add("show");
             circles.style.display = "block";
-
-            setTimeout(() => {
-                infoBlock.style.display = "block";
-                infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
-
+            if(!menugeopend){
+                menugeopend = true;
                 setTimeout(() => {
-                    infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
-                    setTimeout(() => {
-                        infoBlock.style.display = "none";
-                    }, 100);
-                }, 3000);
-            }, 1000);
+                        infoBlock.style.display = "block";
+                        infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
+
+                        setTimeout(() => {
+                            infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
+                            setTimeout(() => {
+                                infoBlock.style.display = "none";
+                            }, 100);
+                        }, 3000);
+                    }, 1000);
+            }
         }
     }
 }
@@ -200,4 +205,39 @@ function closeWindow() {
 function playSound() {
     const sound = document.getElementById('errorSound') as HTMLAudioElement;
     sound.play();
+}
+function burnRandomButton() {
+    // Get all the calculator buttons
+    const buttons = document.querySelectorAll("#keys button");
+
+    // Ensure there are buttons to burn
+    if (buttons.length === 0) return;
+
+    // Pick a random button
+    const randomIndex = Math.floor(Math.random() * buttons.length);
+    const randomButton = buttons[randomIndex];
+
+    // Create a flame element
+    const flame = document.createElement("div");
+    flame.classList.add("flame");
+    randomButton.appendChild(flame);
+
+    // Start the "burning" process
+    let burnDuration = 3000; // Time to completely "burn" the button
+    let opacity = 1;
+    const interval = setInterval(() => {
+        opacity -= 0.05;
+        (randomButton as HTMLElement).style.opacity = opacity.toString();
+        if (opacity <= 0) {
+            clearInterval(interval);
+            (randomButton as HTMLElement).style.visibility = "hidden"; // Button disappears
+            randomButton.textContent = ""; // Number disappears
+            randomButton.remove(); // Optionally remove the button
+        }
+    }, burnDuration / 20);
+
+    // Remove flame after burning
+    setTimeout(() => {
+        flame.remove();
+    }, burnDuration);
 }

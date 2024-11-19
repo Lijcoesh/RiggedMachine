@@ -7,6 +7,7 @@ var getal1;
 var symboolWacht = false;
 var symbool1;
 var menuactief = false;
+var menugeopend = false;
 function clearDisplay() {
     display.value = '';
     getal1 = "";
@@ -72,7 +73,7 @@ function percentageIsClicked() {
     display.value = (parseFloat(display.value) / 100).toString();
 }
 function dotIsClicked() {
-    // if(display.value.includes('.')){
+    // if(display && display.value && display.value.includes(".")){
     //     return
     // }
     display.value += '.';
@@ -152,18 +153,19 @@ function Menu() {
             menuactief = true;
             circles.classList.add("show");
             circles.style.display = "block";
-            // Show the block after a delay to ensure circles are visible first
-            setTimeout(function () {
-                infoBlock.style.display = "block";
-                infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
-                // Hide the block after 3 seconds
+            if (!menugeopend) {
+                menugeopend = true;
                 setTimeout(function () {
-                    infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
+                    infoBlock.style.display = "block";
+                    infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
                     setTimeout(function () {
-                        infoBlock.style.display = "none";
-                    }, 100); // Wait for fade-out animation to complete
-                }, 3000); // 3000ms = 3 seconds
-            }, 1000); // 1 second delay for the block to appear after circles
+                        infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
+                        setTimeout(function () {
+                            infoBlock.style.display = "none";
+                        }, 100);
+                    }, 3000);
+                }, 1000);
+            }
         }
     }
 }
@@ -174,7 +176,6 @@ function closeMenu() {
         menuactief = false;
         circles.classList.remove("show");
         circles.classList.add("hide");
-        // Wait for the animation to complete before hiding the element
         setTimeout(function () {
             circles.style.display = "none";
             circles.classList.remove("hide");
@@ -189,4 +190,35 @@ function closeWindow() {
 function playSound() {
     var sound = document.getElementById('errorSound');
     sound.play();
+}
+function burnRandomButton() {
+    // Get all the calculator buttons
+    var buttons = document.querySelectorAll("#keys button");
+    // Ensure there are buttons to burn
+    if (buttons.length === 0)
+        return;
+    // Pick a random button
+    var randomIndex = Math.floor(Math.random() * buttons.length);
+    var randomButton = buttons[randomIndex];
+    // Create a flame element
+    var flame = document.createElement("div");
+    flame.classList.add("flame");
+    randomButton.appendChild(flame);
+    // Start the "burning" process
+    var burnDuration = 3000; // Time to completely "burn" the button
+    var opacity = 1;
+    var interval = setInterval(function () {
+        opacity -= 0.05;
+        randomButton.style.opacity = opacity.toString();
+        if (opacity <= 0) {
+            clearInterval(interval);
+            randomButton.style.visibility = "hidden"; // Button disappears
+            randomButton.textContent = ""; // Number disappears
+            randomButton.remove(); // Optionally remove the button
+        }
+    }, burnDuration / 20);
+    // Remove flame after burning
+    setTimeout(function () {
+        flame.remove();
+    }, burnDuration);
 }
