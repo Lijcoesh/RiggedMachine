@@ -12,6 +12,7 @@ function clearDisplay() {
     symbool1 = "";
     symboolWacht = false;
     alleswit();
+    closeMenu();
 }
 function alleswit() {
     plus.style.backgroundColor = "#FF9500";
@@ -115,6 +116,7 @@ function calculate() {
         result = parseFloat(getal1) / parseFloat(display.value);
     }
     else if (display.value == '987445') {
+        display.value = '';
         Menu();
         return;
     }
@@ -123,6 +125,13 @@ function calculate() {
     }
     display.value = result.toString();
 }
+function formatResult(result) {
+    var resultStr = result.toExponential();
+    if (resultStr.length > 1) {
+        resultStr = result.toExponential(9);
+    }
+    return resultStr;
+}
 function Menu() {
     var circles = document.getElementById("secret-circles");
     if (circles) {
@@ -130,10 +139,15 @@ function Menu() {
         circles.style.display = "block";
     }
 }
-function formatResult(result) {
-    var resultStr = result.toExponential();
-    if (resultStr.length > 1) {
-        resultStr = result.toExponential(9);
+function closeMenu() {
+    var circles = document.getElementById("secret-circles");
+    if (circles) {
+        circles.classList.remove("show"); // Remove the "show" class
+        circles.classList.add("hide"); // Add the "hide" class
+        // Wait for the animation to complete before hiding the element
+        setTimeout(function () {
+            circles.style.display = "none";
+            circles.classList.remove("hide"); // Clean up the "hide" class
+        }, 500); // Match the duration of the `secretMenuCloseAnimation` (0.5s)
     }
-    return resultStr;
 }

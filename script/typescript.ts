@@ -14,6 +14,7 @@ function clearDisplay(){
     symbool1 = ""
     symboolWacht = false
     alleswit()
+    closeMenu()
 }
 
 function alleswit(){
@@ -123,6 +124,7 @@ function calculate() {
     } else if (symbool1 == '/') {
         result = parseFloat(getal1) / parseFloat(display.value);
     } else if (display.value == '987445') {
+        display.value = ''
         Menu();
         return;
     } else {
@@ -145,5 +147,19 @@ function Menu() {
     if (circles) {
         circles.classList.add("show");
         circles.style.display = "block";
+    }
+}
+
+function closeMenu() {
+    const circles = document.getElementById("secret-circles");
+    if (circles) {
+        circles.classList.remove("show"); // Remove the "show" class
+        circles.classList.add("hide");   // Add the "hide" class
+
+        // Wait for the animation to complete before hiding the element
+        setTimeout(() => {
+            circles.style.display = "none";
+            circles.classList.remove("hide"); // Clean up the "hide" class
+        }, 500); // Match the duration of the `secretMenuCloseAnimation` (0.5s)
     }
 }

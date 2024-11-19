@@ -137,3 +137,18 @@ button:active {
 #secret-circles.show {
     animation: secretMenuAnimation 0.5s forwards;
 }
+
+@keyframes secretMenuCloseAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+#secret-circles.hide {
+    animation: secretMenuCloseAnimation 0.5s forwards;
+}
