@@ -78,8 +78,9 @@ button:active {
     background-color: #c3c3c3;
 }
 
+/* Positioning for the secret circles */
 #secret-circles {
-    display: none; 
+    display: none; /* Hidden initially */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -90,29 +91,29 @@ button:active {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    backdrop-filter: blur(80px);
     background: linear-gradient(135deg, #FF9500, #FFD700);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     cursor: pointer;
-    opacity: 0; 
-    transform: scale(0); 
+    opacity: 0; /* Initially invisible */
+    transform: scale(0); /* Initially shrunk */
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-#secret-circles .circle:nth-child(1) { top: -150px; left: 0; }
-#secret-circles .circle:nth-child(2) { top: -100px; left: 100px; }
-#secret-circles .circle:nth-child(3) { top: 0; left: 150px; }
-#secret-circles .circle:nth-child(4) { top: 100px; left: 100px; }
-#secret-circles .circle:nth-child(5) { top: 150px; left: 0; }
-#secret-circles .circle:nth-child(6) { top: 100px; left: -100px; }
-#secret-circles .circle:nth-child(7) { top: 0; left: -150px; }
-#secret-circles .circle:nth-child(8) { top: -100px; left: -100px; }
-#secret-circles .circle:nth-child(9) { top: 0; left: 0; }
+/* Circle positions */
+#secret-circles .circle:nth-child(1) { top: -300px; left: 330px; }
+#secret-circles .circle:nth-child(2) { top: -150px; left: 330px; }
+#secret-circles .circle:nth-child(3) { top: 0; left: 330px; }
+#secret-circles .circle:nth-child(4) { top: 150px; left: 330px; }
+#secret-circles .circle:nth-child(5) { top: -300px; left: -375px; }
+#secret-circles .circle:nth-child(6) { top: -150px; left: -375px; }
+#secret-circles .circle:nth-child(7) { top: 0; left: -375px; }
+#secret-circles .circle:nth-child(8) { top: 150px; left: -375px; }
 
+/* Pop-up animation for showing the circles */
 #secret-circles.show .circle {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 2;
+    transform: scale(2); /* Expand to full size */
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
