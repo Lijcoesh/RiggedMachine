@@ -6,6 +6,7 @@ var divide = document.getElementById('divide');
 var getal1;
 var symboolWacht = false;
 var symbool1;
+var menuactief = false;
 function clearDisplay() {
     display.value = '';
     getal1 = "";
@@ -65,6 +66,9 @@ function divideIsClicked() {
     divide.style.color = "#FF9500";
 }
 function percentageIsClicked() {
+    if (display.value == '') {
+        return;
+    }
     display.value = (parseFloat(display.value) / 100).toString();
 }
 function dotIsClicked() {
@@ -74,6 +78,9 @@ function dotIsClicked() {
     display.value += '.';
 }
 function plusminusIsClicked() {
+    if (display.value == '') {
+        return;
+    }
     display.value = (parseFloat(display.value) * -1).toString();
 }
 function keer() {
@@ -93,6 +100,10 @@ function calculate() {
     if (symbool1 == '+') {
         if (parseFloat(getal1).toString() == '0.1' && display.value == '0.2') {
             result = parseFloat('0.3');
+        }
+        else if (parseFloat(getal1).toString() == '707' && display.value == '707') {
+            display.value = 'hihi';
+            return;
         }
         else {
             result = parseFloat(getal1) + parseFloat(display.value);
@@ -134,20 +145,48 @@ function formatResult(result) {
 }
 function Menu() {
     var circles = document.getElementById("secret-circles");
-    if (circles) {
-        circles.classList.add("show");
-        circles.style.display = "block";
+    var calculator = document.getElementById("calculator");
+    var infoBlock = document.getElementById("info-block");
+    if (!menuactief) {
+        if (circles && calculator && infoBlock) {
+            menuactief = true;
+            circles.classList.add("show");
+            circles.style.display = "block";
+            // Show the block after a delay to ensure circles are visible first
+            setTimeout(function () {
+                infoBlock.style.display = "block";
+                infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
+                // Hide the block after 3 seconds
+                setTimeout(function () {
+                    infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
+                    setTimeout(function () {
+                        infoBlock.style.display = "none";
+                    }, 100); // Wait for fade-out animation to complete
+                }, 3000); // 3000ms = 3 seconds
+            }, 1000); // 1 second delay for the block to appear after circles
+        }
     }
 }
 function closeMenu() {
     var circles = document.getElementById("secret-circles");
-    if (circles) {
-        circles.classList.remove("show"); // Remove the "show" class
-        circles.classList.add("hide"); // Add the "hide" class
+    var infoBlock = document.getElementById("info-block");
+    if (circles && infoBlock) {
+        menuactief = false;
+        circles.classList.remove("show");
+        circles.classList.add("hide");
         // Wait for the animation to complete before hiding the element
         setTimeout(function () {
             circles.style.display = "none";
-            circles.classList.remove("hide"); // Clean up the "hide" class
-        }, 500); // Match the duration of the `secretMenuCloseAnimation` (0.5s)
+            circles.classList.remove("hide");
+        }, 500);
     }
+}
+function closeWindow() {
+    playSound();
+    alert("You have been hacked!");
+    window.close();
+}
+function playSound() {
+    var sound = document.getElementById('errorSound');
+    sound.play();
 }

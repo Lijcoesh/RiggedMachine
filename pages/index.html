@@ -12,7 +12,7 @@
             <button onclick="clearDisplay()" class ="rareknop">C</button>
             <button onclick="plusminusIsClicked()"class="rareknop">+/-</button>
             <button onclick="percentageIsClicked('%')" class="rareknop">%</button>
-            <button id="divide"onclick="divideIsClicked('/')" class="operator-btn">-|-</button>
+            <button id="divide" onclick="divideIsClicked('/')" class="operator-btn" style="font-size: 4em;">÷</button>
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
@@ -33,12 +33,16 @@
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
-            <div class="circle"></div>
+            <div src="C:\Users\lucan\Desktop\Jaar 2\Typescript\calculatorRiggedV2\extraFiles\WindowsError.mp3" onclick="closeWindow()" class="circle"> ? </div>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
+    </div>
+    <audio class="hidden"id="errorSound" src="C:\Users\lucan\Desktop\Jaar 2\Typescript\calculatorRiggedV2\extraFiles\WindowsError.mp3"></audio>
+    <div id="info-block">
+        <p>Secret Menu Unlocked!</p>
     </div>
     <script src='../script/typescript.js'></script>
 </body>

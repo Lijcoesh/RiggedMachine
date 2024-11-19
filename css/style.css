@@ -100,6 +100,10 @@ button:active {
     opacity: 0; /* Initially invisible */
     transform: scale(0); /* Initially shrunk */
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 1.5rem;
 }
 
 /* Circle positions */
@@ -151,4 +155,44 @@ button:active {
 
 #secret-circles.hide {
     animation: secretMenuCloseAnimation 0.5s forwards;
+}
+
+#info-block {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 60px);
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeinMenuBlockMessage {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes fadeoutMenuBlockMessage {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 }

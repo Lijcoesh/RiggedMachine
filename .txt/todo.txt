@@ -9,6 +9,10 @@
 //turn the calculator into a timer, so the calculator no longer works but still looks the same
 //glitch the result when you calculate something
 //make the buttons fly
+//geluid
+//knop in de fix
+/jumpscare
+
 
 -when menu is opened, blur background
 -create back button for menu
