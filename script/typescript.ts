@@ -82,9 +82,6 @@ function percentageIsClicked(){
 }
 
 function dotIsClicked(){
-    // if(display.value.includes('.')){
-    //     return
-    // }
     display.value += '.'
 }
 
@@ -163,19 +160,17 @@ function Menu() {
             circles.classList.add("show");
             circles.style.display = "block";
 
-            // Show the block after a delay to ensure circles are visible first
             setTimeout(() => {
                 infoBlock.style.display = "block";
                 infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
 
-                // Hide the block after 3 seconds
                 setTimeout(() => {
                     infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
                     setTimeout(() => {
                         infoBlock.style.display = "none";
-                    }, 100); // Wait for fade-out animation to complete
-                }, 3000); // 3000ms = 3 seconds
-            }, 1000); // 1 second delay for the block to appear after circles
+                    }, 100);
+                }, 3000);
+            }, 1000);
         }
     }
 }
@@ -189,7 +184,6 @@ function closeMenu() {
         circles.classList.remove("show");
         circles.classList.add("hide");
 
-        // Wait for the animation to complete before hiding the element
         setTimeout(() => {
             circles.style.display = "none";
             circles.classList.remove("hide");

@@ -80,9 +80,8 @@ button:active {
     background-color: #c3c3c3;
 }
 
-/* Positioning for the secret circles */
 #secret-circles {
-    display: none; /* Hidden initially */
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,8 +96,8 @@ button:active {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     cursor: pointer;
-    opacity: 0; /* Initially invisible */
-    transform: scale(0); /* Initially shrunk */
+    opacity: 0;
+    transform: scale(0);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     text-align: center;
     line-height: 50px;
@@ -106,7 +105,6 @@ button:active {
     font-size: 1.5rem;
 }
 
-/* Circle positions */
 #secret-circles .circle:nth-child(1) { top: -300px; left: 330px; }
 #secret-circles .circle:nth-child(2) { top: -150px; left: 330px; }
 #secret-circles .circle:nth-child(3) { top: 0; left: 330px; }
@@ -116,10 +114,9 @@ button:active {
 #secret-circles .circle:nth-child(7) { top: 0; left: -375px; }
 #secret-circles .circle:nth-child(8) { top: 150px; left: -375px; }
 
-/* Pop-up animation for showing the circles */
 #secret-circles.show .circle {
     opacity: 2;
-    transform: scale(2); /* Expand to full size */
+    transform: scale(2);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
@@ -127,6 +124,7 @@ button:active {
     background: linear-gradient(135deg, #FFD700, #FF9500);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+
 @keyframes secretMenuAnimation {
     0% {
         transform: translate(-50%, -50%) scale(0);
@@ -158,7 +156,7 @@ button:active {
 }
 
 #info-block {
-    display: none; /* Hidden initially */
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
