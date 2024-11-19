@@ -132,18 +132,18 @@ function calculate() {
     display.value = result.toString();
 }
 
-function Menu() {
-    const circles = document.getElementById("secret-circles");
-    if (circles) {
-        circles.classList.add("show");
-        circles.style.display = "block";
-    }
-}
-
 function formatResult(result: number): string {
     let resultStr = result.toExponential();
     if (resultStr.length > 1) {
         resultStr = result.toExponential(9);
     }
     return resultStr;
+}
+
+function Menu() {
+    const circles = document.getElementById("secret-circles");
+    if (circles) {
+        circles.classList.add("show");
+        circles.style.display = "block";
+    }
 }

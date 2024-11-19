@@ -1,13 +1,14 @@
--display tekst naar rechts
+-display text to the right
 
-//keuze van verschillende themas
-//voeg lasers toe die activeren als er een knop word geklikt in de rekenmachine
-//verander de volgorde van de knoppen
-//voeg geluidseffecten toe aan de knoppen
-//laat de knoppen oplichten als er op geklikt word
-//verander de rekenmachine in een timer. dus de rekenmachine werkt helemaal niet meer maar ziet er nog wel hetzelfde uit
-//als je iets berekent glitch de uitslag
-//de knoppen vliegen
+-Circle option ideas:
+//choose different themes
+//add lasers that activate when a button is clicked on the calculator
+//change the order of the buttons
+//add sound effects to the buttons
+//make the buttons light up when clicked
+//turn the calculator into a timer, so the calculator no longer works but still looks the same
+//glitch the result when you calculate something
+//make the buttons fly
 
 -when menu is opened, blur background
 -create back button for menu
