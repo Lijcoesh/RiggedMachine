@@ -16,7 +16,6 @@ function clearDisplay(){
     symbool1 = ""
     symboolWacht = false
     alleswit()
-    closeMenu()
 }
 
 function alleswit(){
@@ -135,10 +134,6 @@ function calculate() {
         }
     } else if (symbool1 == '/') {
         result = parseFloat(getal1) / parseFloat(display.value);
-    } else if (display.value == '987445') {
-        display.value = ''
-        Menu();
-        return;
     } else {
         return;
     }
@@ -152,92 +147,4 @@ function formatResult(result: number): string {
         resultStr = result.toExponential(9);
     }
     return resultStr;
-}
-function Menu() {
-    const circles = document.getElementById("secret-circles");
-    const calculator = document.getElementById("calculator");
-    const infoBlock = document.getElementById("info-block");
-    if(!menuactief){
-        if (circles && calculator && infoBlock) {
-            menuactief = true;
-            circles.classList.add("show");
-            circles.style.display = "block";
-            if(!menugeopend){
-                menugeopend = true;
-                setTimeout(() => {
-                        infoBlock.style.display = "block";
-                        infoBlock.style.animation = "fadeinMenuBlockMessage 0.5s ease-out forwards";
-
-                        setTimeout(() => {
-                            infoBlock.style.animation = "fadeoutMenuBlockMessage 0.5s ease-out forwards";
-                            setTimeout(() => {
-                                infoBlock.style.display = "none";
-                            }, 100);
-                        }, 3000);
-                    }, 1000);
-            }
-        }
-    }
-}
-
-function closeMenu() {
-    const circles = document.getElementById("secret-circles");
-    const infoBlock = document.getElementById("info-block");
-
-    if (circles && infoBlock) {
-        menuactief = false; 
-        circles.classList.remove("show");
-        circles.classList.add("hide");
-
-        setTimeout(() => {
-            circles.style.display = "none";
-            circles.classList.remove("hide");
-        }, 500);
-    }
-}
-
-function closeWindow() {
-    playSound()
-    alert("You have been hacked!");
-    window.close()
-}
-
-function playSound() {
-    const sound = document.getElementById('errorSound') as HTMLAudioElement;
-    sound.play();
-}
-function burnRandomButton() {
-    // Get all the calculator buttons
-    const buttons = document.querySelectorAll("#keys button");
-
-    // Ensure there are buttons to burn
-    if (buttons.length === 0) return;
-
-    // Pick a random button
-    const randomIndex = Math.floor(Math.random() * buttons.length);
-    const randomButton = buttons[randomIndex];
-
-    // Create a flame element
-    const flame = document.createElement("div");
-    flame.classList.add("flame");
-    randomButton.appendChild(flame);
-
-    // Start the "burning" process
-    let burnDuration = 3000; // Time to completely "burn" the button
-    let opacity = 1;
-    const interval = setInterval(() => {
-        opacity -= 0.05;
-        (randomButton as HTMLElement).style.opacity = opacity.toString();
-        if (opacity <= 0) {
-            clearInterval(interval);
-            (randomButton as HTMLElement).style.visibility = "hidden"; // Button disappears
-            randomButton.textContent = ""; // Number disappears
-            randomButton.remove(); // Optionally remove the button
-        }
-    }, burnDuration / 20);
-
-    // Remove flame after burning
-    setTimeout(() => {
-        flame.remove();
-    }, burnDuration);
 }
