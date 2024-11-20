@@ -29,6 +29,20 @@
             <button onclick="dotIsClicked('.')">,</button>
             <button onclick="calculate()" class="operator-btn">=</button>
         </div>
+        <div id="secret-circles">
+            <div onclick="burnRandomButton()" class="circle"> 🔥 </div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div src="extraFiles\WindowsError.mp3" onclick="closeWindow()" class="circle"> ? </div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <audio class="hidden"id="errorSound" src="C:\Users\lucan\Desktop\Jaar 2\Typescript\calculatorRiggedV2\extraFiles\WindowsError.mp3"></audio>
+    <div id="info-block">
+        <p>Secret Menu Unlocked!</p>
     </div>
     <script src='../script/typescript.js'></script>
 </body>

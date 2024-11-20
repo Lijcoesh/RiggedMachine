@@ -5,3 +5,9 @@
 -dotIsClicked code in de comments werkt niet 
 
 -als a x b word gedaan en er direct x word geklikt ipv = moet er berekent worden
+
+-sound werkt niet in github.into
+
+-window.close werkt niet in github.io
+
+-number moves up when it is burning away
